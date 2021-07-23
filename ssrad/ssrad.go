@@ -64,6 +64,7 @@ func (r *RpcServer) Discover(ctx context.Context, request *pb.DiscoverRequest) (
 	//遍历查找服务
 	for _, v := range Servers {
 		if v.ServerName == request.Servername {
+			//该部分将在后续实现负载均衡时改进
 			response := pb.DiscoverResponse{
 				Msg:         "找到该服务了，给你一个",
 				Serverstate: v.ServerState[len(v.ServerState)-1],
