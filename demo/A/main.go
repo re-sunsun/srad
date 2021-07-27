@@ -6,6 +6,7 @@ import (
 	"time"
 )
 
+//注册测试
 func main() {
 	clint, err := ssradc.Default("localhost:8080")
 	if err != nil {
